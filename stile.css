@@ -1,72 +1,59 @@
 
 body{
-    background: radial-gradient(circle,rgb(233, 239, 179),rgb(154, 227, 238)); 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     max-width: 1200px;
-    
+    margin: auto;
 }
 .container{
-   margin: 10px;
-   padding: 10px;
-   display: grid;
-   grid-template-areas:
-   "ul ul ul"
-   "header header header"
-   "article article aside"
-   "footer footer footer";
-   grid-gap: 10px;
-}
-ul{
-    grid-area: ul;
-}
-
-li{
-    display: inline-flex;
-    padding-left: 100px;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "article article aside"
+    "footer footer footer";  
+    grid-auto-flow: column;
 }
 header{
     grid-area: header;
-    background-color: pink;
+    padding: 8px;
+    background-image: url("img./header1.png");
+}
+.logo-izq{
+    margin: 5px;
+    padding: 5px;
+}
+.img-logo{
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+.links{
+    padding: 5px;
+   
+}
+.icon-redes{
+    padding: 5px;
+}
+.titulo{ 
+    padding: 5px;
     text-align: center;
-    padding: 10px;
-    height: 60px;
+    color:orange;
 }
-article{
+li{    
+    display: inline;
+    margin-left: 20px; 
+}
+.article1{
     grid-area: article;
-    background-color: lightcoral;
-    padding: 10px;
-    height: 200px;
+    padding: 8px;
+    background-color: lightgrey;
 }
-aside {
+aside{
     grid-area: aside;
-    background-color: lightgoldenrodyellow;
-   padding: 10px;
-   height: 200px;
+    padding: 8px;
+    background-color: lightgrey;
 }
-footer {
+footer{
     grid-area: footer;
-    background-color: lightseagreen;
-    padding: 10px;
-    height: 20px;
-}
-
-@media (max-width: 780px){
-    .container{
-        grid-template-areas: 
-        "ul ul"
-        "header header"
-        "article article"
-        "aside aside"
-        "footer footer";
-    }
-}
-@media (max-width: 400px){
-    .container{
-        grid-template-areas:
-        "ul"
-        "header"
-        "article"
-        "aside"
-        "footer";
-    }
+    padding: 8px;
+    background-color: lightgrey;
 }
